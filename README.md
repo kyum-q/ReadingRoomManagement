@@ -28,8 +28,7 @@ LED – GPIO 5, GPIO 6, GPIO 13, GPIO 19<br>
 
 <h4>라즈베리 구조도</h4>
 
-![image](https://user-images.githubusercontent.com/109158497/200006927-9e43c6c6-af22-43db-b5f0-de80cdb4f349.png)
-![image](https://user-images.githubusercontent.com/109158497/200006976-a6532974-a43f-4305-b525-2eb197eb78cd.png)
+![image](https://user-images.githubusercontent.com/109158497/200011368-e59c74c5-2bdc-4d79-89c3-569881ef464e.png)
 
 # 소프트웨어 구조
 

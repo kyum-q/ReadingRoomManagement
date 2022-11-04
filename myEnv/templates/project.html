@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset = "UTF-8">
+        <title>독서실 관리 프로그램</title>
+        <link fref="/static/mystyle.css" type="text/css" rel="stylesheet">
+        <!-- css 파일 불러오기-->
+</head>
+<body>
+	<h3>당신의 권한을 선택해주세요</h3>
+	<hr>
+	<form action='/manager' method="get">
+		<p>관리자 권한 출입 관리 시스템: <p>
+		<input type="submit" value="manager">
+	</form>
+	<hr>
+	<form action='/user' method="get">
+                <p>사용자 권한 출입 관리 시스템: <p>
+                <input type="submit" value="user">
+        </form>
+</body>
+</html>

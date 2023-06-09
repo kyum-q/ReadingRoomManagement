@@ -1,76 +1,85 @@
 # ReadingRoomManagement
 라즈베리파이를 이용한 독서실 이용관리 시스템
 
-# 작품 개요
+## 📚&nbsp; 작품 소개
 
-독서실에 카메라, 초음파 센서, 온습도 센서, LED 등을 연결한 라즈베리파이를 이용해 독서실을 관리하는 시스템이다. 이 시스템은 먼저 하나의 웹사이트로 관리를 할 수 있다. 이러한 관리 시스템은 웹사이트 접속자가 사용자인지 관리자인지에 따라 용도가 다르다. 사용자인지 관리자인지는 웹사이트에서 선택할 수 있다.<br>
+독서실에 카메라, 초음파 센서, 온습도 센서, LED 등을 연결한 라즈베리파이를 이용해 독서실을 관리하는 시스템이다. <br>
+이 시스템은 먼저 하나의 웹사이트로 관리를 할 수 있다. 이러한 관리 시스템은 웹사이트 접속자가 사용자인지 관리자인지에 따라 용도가 다르다. 사용자인지 관리자인지는 웹사이트에서 선택할 수 있다.<br>
+<br>
+
+### 🙍🏻‍♀️&nbsp; 사용자
 먼저 사용자는 웹사이트를 통해 사용여부와 사용 시간을 선택할 수 있다. 그리고 자리에서 초음파 센서 10cm이내 거리에 손을 가져다 되면 조명이 켜진다. 조명의 기본 설정은 하얀색 LED이다. 사용자는 LED의 색상을 웹사이트를 이용해 변경할 수 있다. 사용자는 웹사이트 내 조명 선택 라디오 버튼을 통해 조명을 초록, 노랑, 하얀색 중 선택할 수 있다(다중 선택 가능). 또한 독서실 자리에 있는 온습도 센서를 이용해 적정 실내 온도(18 ~ 20°C)를 넘어 25°C가 되거나 혹은 적정 실내 습도(40 ~ 60%)를 넘어 65%가 되면 빨간색 조명을 3번 깜박거려 온습도가 적정 부분을 넘겼음을 알린다. 이러한 온습도 그래프는 웹사이트 내에서 확인 할 수 있다. 그리고 사용자 웹사이트에 warning 버튼이 하나 있다. 이 버튼은 관리자 호출 버튼으로 독서실 내에 문제가 생겼을 시 누르면 관리자에게 ‘호출’이라는 알림이 간다. 또한 사용자가 선택한 사용 시간이 다 되면 자리의 LED는 자동으로 꺼지고 웹사이트 내에 ‘사용 시간이 종료 되었습니다.’와 같은 메시지를 띄운다.<br>
+독서실에 카메라, 초음파 센서, 온습도 센서, LED 등을 연결한 라즈베리파이를 이용해 독서실을 관리하는 시스템이다. 이 시스템은 먼저 하나의 웹사이트로 관리를 할 수 있다. 이러한 관리 시스템은 웹사이트 접속자가 사용자인지 관리자인지에 따라 용도가 다르다. 사용자인지 관리자인지는 웹사이트에서 선택할 수 있다.<br>
+
+### 🤵🏻&nbsp; 관리자
+독서실에 카메라, 초음파 센서, 온습도 센서, LED 등을 연결한 라즈베리파이를 이용해 독서실을 관리하는 시스템이다. 이 시스템은 먼저 하나의 웹사이트로 관리를 할 수 있다. 이러한 관리 시스템은 웹사이트 접속자가 사용자인지 관리자인지에 따라 용도가 다르다. 사용자인지 관리자인지는 웹사이트에서 선택할 수 있다.<br>
 관리자는 사용자의 선택에 따라 독서실 내에 자리에 사람이 있는지 있다면 사용 시간은 얼마나 남았는지 확인할 수 있다. 또한 사용자의 사용여부를 초음파 센서와 카메라를 통해 알아낼 수 있다. 그리고 이를통해 사용자가 존재하지 않음이 판단될 경우 관리자 임의로 자리를 비울 수 있다.<br>
-사용자 사용여부는 사용자 자리에 있는 초음파 센서 변화 그래프를 통해 확인하거나 독서실을 비추고 있는 카메라를 확인하여 사용자가 자리에 없음이 확인할 수 있다.
+사용자 사용여부는 사용자 자리에 있는 초음파 센서 변화 그래프를 통해 확인하거나 독서실을 비추고 있는 카메라를 확인하여 사용자가 자리에 없음이 확인할 수 있다. <br><br>
 
-# 시스템 구조
+## ✍🏻&nbsp; 시스템 구조
 
-<h4>사용자의 상황에 따른 웹 브라우저 구조 변화</h4>
+### 1) 독서실 자리 - 사용자 및 관리자의 데이터 전송 구조
+![Group 9](https://github.com/kyum-q/ReadingRoomManagement/assets/109158497/d67453c4-c163-48e7-9785-673d82b34914)
+<br>
 
-![image](https://user-images.githubusercontent.com/109158497/200006038-fa992d4d-5dec-47b8-9874-f8ec6d7c8fa3.png)
+### 2) 사용자의 웹브라우저 사용 흐름
+![image 15](https://github.com/kyum-q/ReadingRoomManagement/assets/109158497/22379be9-34b2-418a-b1df-6b9e15cc05ac)
+<br>
 
-<h4>독서실 자리와 웹 브라우저 구조 </h4>
+## 💻&nbsp; 하드웨어 구조
 
-# 하드웨어 구조
+라즈베리파이에 카메라 1개, 온습도 센서 1개, 초음파 센서 1개, LED 4개, 버튼 1개를 사용한다.<br><br>
 
-<h4>하드웨어 부분</h4>
-라즈베리파이에 카메라 1개, 온습도 센서 1개, 초음파 센서 1개, LED 4개, 버튼 1개를 사용한다.<br>
 이들은 각 GPIO 핀은 다음과 같다.<br>
-
 LED – GPIO 5, GPIO 6, GPIO 13, GPIO 19<br>
 초음파 센서 – GPIO 16, GPIO 20<br>
-온습도 센서 – GPIO 2, GPIO 3<br>
-
-<h4>라즈베리 구조도</h4>
+온습도 센서 – GPIO 2, GPIO 3<br><br>
 
 ![image](https://user-images.githubusercontent.com/109158497/200011368-e59c74c5-2bdc-4d79-89c3-569881ef464e.png)
+**<p align="center">[라즈베리파이 구성]</p>**
+<br>
 
-# 소프트웨어 구조
+## 💡&nbsp; 소프트웨어 구조
 
-<h4>소프트웨어 부분</h4>
+<img width="1439" alt="image" src="https://github.com/kyum-q/ReadingRoomManagement/assets/109158497/5ba77b43-ab0b-4b42-bffa-297241cdc22d">
 
-<h4>파이썬 코드</h4>
+**<p align="center">[소프트웨어 구성]</p>**
+<br>
 
-1) app.py – 웹브라우저로부터 접속과 요청을 받아 처리하는 플라스크 앱<br>
-: 모드 선택 모드 / 사용자 사용여부, 시간 설정 / 관리자 로그인 웹페이지 로딩 / 사용시간 설정(timer)<br>
-2) mqtt.py – mqtt subscribe하고 publish하는 파이썬 코드<br>
-: mqtt서버로부터 date 토픽을 subscribe하고 data 토픽을 publish하는 코드<br>
-3) circuit.py – 초음파센서, LED 조정하는 파이썬 코드<br>
-:  사용자 자리 초음파 센서를 값을 알아내고 LED 조명을 on/off하는 코드<br>
-4) environment.py – 온습도센서 조정하는 파이썬 코드<br>
-: 사용자 자리 온습도 센서 값을 알아내는 코드<br>
-5) myCamera.py – 카메라 촬영하는 파이썬 코드<br>
-: 카메라를 통해 사용자 자리를 촬영하고 openCV를 가지고 사람의 얼굴을 표시하는 코드<br>
+### 1) 파이썬 코드
 
-<h4>js 혹은 css 코드 (static)</h4>
+**1) app.py** – 웹브라우저로부터 접속과 요청을 받아 처리하는 플라스크 앱<br>
+&emsp;&emsp;&emsp;&emsp; : 모드 선택 모드 / 사용자 사용여부, 시간 설정 / 관리자 로그인 웹페이지 로딩 / 사용시간 설정(timer)<br><br>
+**2) mqtt.py** – mqtt subscribe하고 publish하는 파이썬 코드<br>
+&emsp;&emsp;&emsp;&emsp; : mqtt서버로부터 date 토픽을 subscribe하고 data 토픽을 publish하는 코드<br><br>
+**3) circuit.py** – 초음파센서, LED 조정하는 파이썬 코드<br>
+&emsp;&emsp;&emsp;&emsp; :  사용자 자리 초음파 센서를 값을 알아내고 LED 조명을 on/off하는 코드<br><br>
+**4) environment.py** – 온습도센서 조정하는 파이썬 코드<br>
+&emsp;&emsp;&emsp;&emsp; : 사용자 자리 온습도 센서 값을 알아내는 코드<br><br>
+**5) myCamera.py** – 카메라 촬영하는 파이썬 코드<br>
+&emsp;&emsp;&emsp;&emsp; : 카메라를 통해 사용자 자리를 촬영하고 openCV를 가지고 사람의 얼굴을 표시하는 코드<br><br>
 
-1) mqttio.js - mqtt를 이용하여 라즈베리파이와 값을 주고받는 자바스크립트 코드<br>
-2) face.js – 웹페이지 내에 캔버스에 image을 그리는 자바스크립트<br>
-3) timer.js – 웹페이지에서 초와 함께 호출하면 timer가 진행되는 자바스크립트<br>
-4) myChart.js – 초음파센서로부터 얻은 값을 통해 그래프를 만드는 자바스크립트<br>
-5) userChart.js – 온습도센서부터 얻은 값을 통해 그래프를 만드는 자바스크립트<br>
+### 2) js 혹은 css 코드 (static)
 
-6) main.css – user.html/manager.html의 css 코드<br>
-7) login.css – user.html/manager.html을 제외한 css 코드<br>
+**1) mqttio.js** - mqtt를 이용하여 라즈베리파이와 값을 주고받는 자바스크립트 코드<br>
+**2) face.js** – 웹페이지 내에 캔버스에 image을 그리는 자바스크립트<br>
+**3) timer.js** – 웹페이지에서 초와 함께 호출하면 timer가 진행되는 자바스크립트<br>
+**4) myChart.js** – 초음파센서로부터 얻은 값을 통해 그래프를 만드는 자바스크립트<br>
+**5) userChart.js** – 온습도센서부터 얻은 값을 통해 그래프를 만드는 자바스크립트<br>
 
-<h4>html 코드 (templates)</h4>
+**6) main.css** – user.html/manager.html의 css 코드<br>
+**7) login.css** – user.html/manager.html을 제외한 css 코드<br><br>
 
-1) project.html – 초기화면 html (모드선택 가능 – 사용자, 관리자)<br>
-2) useChoose.html – 사용자 사용여부 선택 html<br>
-3) useStudyRoom.html – 누군가가 독서실을 사용할 경우 나타나는 사용중 표시 html<br>
-4) timeSetting.html – 사용자의 독서실 사용 시간을 설정하는 html<br>
-5) user,html – 사용자 모드 html (LED조정, 온습도센서 차트, 관리자호출)<br>
-6) managerLogin.html – 관리자 모드 선택시 로그인 html<br>
-7) manager.html – 관리자 모드 html (초음파센서 차트, 카메라 촬영, 사용자 사용 종료)<br>
+### 3) html 코드 (templates)
 
-<h4>소프트웨어 구조도</h4>
+**1) project.html** – 초기화면 html (모드선택 가능 – 사용자, 관리자)<br>
+**2) useChoose.html** – 사용자 사용여부 선택 html<br>
+**3) useStudyRoom.html** – 누군가가 독서실을 사용할 경우 나타나는 사용중 표시 html<br>
+**4) timeSetting.html** – 사용자의 독서실 사용 시간을 설정하는 html<br>
+**5) user,html** – 사용자 모드 html (LED조정, 온습도센서 차트, 관리자호출)<br>
+**6) managerLogin.html** – 관리자 모드 선택시 로그인 html<br>
+**7) manager.html** – 관리자 모드 html (초음파센서 차트, 카메라 촬영, 사용자 사용 종료)<br><br>
 
-![image](https://user-images.githubusercontent.com/109158497/200007018-9204c87c-a73f-450b-b9ec-98b3d99ce192.png)
 
 # 실행 과정 및 결과
 

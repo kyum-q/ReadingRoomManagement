@@ -220,4 +220,8 @@ LED – GPIO 5, GPIO 6, GPIO 13, GPIO 19<br>
 
 ![image-026](https://github.com/kyum-q/ReadingRoomManagement/assets/109158497/9929a579-95d7-4c87-9fc0-9e8744751431)
 **<p align="center">[모든 LED가 꺼진 상태]</p>**
-<br><br>
+<br>
+
+## 💡&nbsp; 개발 언어
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=Html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=Css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
+

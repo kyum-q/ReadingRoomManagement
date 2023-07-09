@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>사용시간 선택</title>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+    <script src="../static/mqttio.js" type="text/javascript"></script>
+    <style>
+        .submit {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function choosetime(n) {
+            // 버튼 클릭시 n분 증가시키기
+            var time = document.getElementsByClassName("time");
+            time[0].value = parseInt(n / 60);
+            time[1].value = parseInt(n % 60);
+        }
+    </script>
+    <link rel="stylesheet" href="../static/login.css">
+</head>
+<body>
+<h3>독서실 사용 시간을 설정해주세요</h3>
+<br>
+<numberlabel>
+    <p>
+        <button onclick="choosetime(15)">15분</button>
+        <button onclick="choosetime(30)">30분</button>
+        <button onclick="choosetime(45)">45분</button>
+        <button onclick="choosetime(60)">60분</button>
+    </p>
+    <form action="/timeset/" method="post">
+        <p>
+            <input class="time" name="hour" type="number" value="0" min="0" max="2"> :
+            <input class="time" name="minute" type="number" value="0" min="0" max="59"> :
+            <input class="time" name="second" type="number" value="0" min="0" max="59">
+        </p>
+        <input type="submit" class="submit" value="timeset">
+    </form>
+    <form action="/use/no" method="get">
+        <input type="submit" class="submit" value="초기화면">
+    </form>
+</numberlabel>
+</body>
+</html>

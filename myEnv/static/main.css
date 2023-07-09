@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#LED-control-form fieldset {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 650px;
+}
+
+#LED-control-form strong {
+    margin-left: 40px;
+}
+
+#broker {
+    width: 200px;
+}
+
+#connection-form {
+    margin-top: 20px;
+}
+
+.button {
+    margin-top: 10px;
+}
+
+#canvas {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}

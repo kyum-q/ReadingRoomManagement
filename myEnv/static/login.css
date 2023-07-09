@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    margin-top: 150px;
+}
+
+input {
+    width: 250px;
+}
+
+.submit {
+    width: 80px;
+    height: 25px;
+}
+
+.time {
+    width: 50px;
+    margin-left: 5px;
+}
+
+fieldset {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    width: 300px;
+}

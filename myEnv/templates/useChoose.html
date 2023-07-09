@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>사용여부 선택</title>
+    <meta charset="utf-8">
+    <style>
+        .submit {
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="../static/login.css">
+</head>
+<body>
+<h3>독서실을 사용하시겠습니까?</h3>
+<label>
+    <form action="/use/yes" method="get">
+        <input type="submit" class="submit" value="YES">
+    </form>
+    <form action="/use/no" method="get">
+        <input type="submit" class="submit" value="초기화면">
+    </form>
+</label>
+</body>
+</html>

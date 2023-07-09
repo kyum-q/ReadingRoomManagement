@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>manager Login</title>
+    <meta charset="utf-8">
+    <style>
+        .submit {
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="../static/login.css">
+</head>
+<body>
+<h3>The study room manager Login</h3>
+<fieldset>
+    <legend><strong>LOGIN</strong></legend>
+    {% print(msg) %}
+    <!-- html 파일 내에 스크립트 코딩 -->
+    <br>
+    <form action="/login" method="post">
+        <label for="loginID">
+            loginID<br>
+            <input type="text" name="id">
+        </label><br>
+        <label for="Password">
+            Password<br>
+            <input type="password" name="pw">
+        </label><br>
+        <label>
+            <input type="submit" class="submit" value="login">
+        </label>
+    </form>
+    <form action="/use/no" method="get">
+        <input type="submit" class="submit" value="초기화면">
+    </form>
+</fieldset>
+</body>
+</html>

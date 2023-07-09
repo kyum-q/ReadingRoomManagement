@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <meta charset = "UTF-8">
-        <title>독서실 관리 프로그램</title>
-        <link fref="/static/mystyle.css" type="text/css" rel="stylesheet">
-        <!-- css 파일 불러오기-->
+    <meta charset="UTF-8">
+    <title>독서실 관리 프로그램</title>
+    <link href="../static/mystyle.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/login.css">
 </head>
 <body>
-	<h3>당신의 권한을 선택해주세요</h3>
-	<hr>
-	<form action='/manager' method="get">
-		<p>관리자 권한 출입 관리 시스템: <p>
-		<input type="submit" value="manager">
-	</form>
-	<hr>
-	<form action='/user' method="get">
-                <p>사용자 권한 출입 관리 시스템: <p>
-                <input type="submit" value="user">
-        </form>
+<h3>당신의 권한을 선택해주세요</h3>
+<fieldset>
+    <form action="/manager" method="get">
+        <p>관리자 권한 출입 관리 시스템</p>
+        <p>
+            <input type="submit" class="submit" value="manager">
+        </p>
+    </form>
+    <form action="/user" method="get">
+        <p>사용자 권한 출입 관리 시스템</p>
+        <p>
+            <input type="submit" class="submit" value="user">
+        </p>
+    </form>
+</fieldset>
 </body>
 </html>

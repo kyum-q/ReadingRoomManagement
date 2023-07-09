@@ -48,11 +48,11 @@ LED – GPIO 5, GPIO 6, GPIO 13, GPIO 19<br>
 
 ### 1) 파이썬 코드
 
-**1) app.py** – [웹브라우저로부터 접속과 요청을 받아 처리하는 플라스크 앱] 모드 선택 모드 / 사용자 사용여부, 시간 설정 / 관리자 로그인 웹페이지 로딩 / 사용시간 설정(timer)<br><br>
-**2) mqtt.py** – [mqtt subscribe하고 publish하는 파이썬 코드] mqtt서버로부터 date 토픽을 subscribe하고 data 토픽을 publish하는 코드<br><br>
-**3) circuit.py** - [초음파센서, LED 조정하는 파이썬 코드] 사용자 자리 초음파 센서를 값을 알아내고 LED 조명을 on/off하는 코드<br><br>
-**4) environment.py** – [온습도센서 조정하는 파이썬 코드] 사용자 자리 온습도 센서 값을 알아내는 코드<br><br>
-**5) myCamera.py** – [카메라 촬영하는 파이썬 코드] 카메라를 통해 사용자 자리를 촬영하고 openCV를 가지고 사람의 얼굴을 표시하는 코드<br><br>
+**1) app.py** – [웹브라우저로부터 접속과 요청을 받아 처리하는 플라스크 앱] 모드 선택 모드 / 사용자 사용여부, 시간 설정 / 관리자 로그인 웹페이지 로딩 / 사용시간 설정(timer)<br>
+**2) mqtt.py** – [mqtt subscribe하고 publish하는 파이썬 코드] mqtt서버로부터 date 토픽을 subscribe하고 data 토픽을 publish하는 코드<br>
+**3) circuit.py** - [초음파센서, LED 조정하는 파이썬 코드] 사용자 자리 초음파 센서를 값을 알아내고 LED 조명을 on/off하는 코드<br>
+**4) environment.py** – [온습도센서 조정하는 파이썬 코드] 사용자 자리 온습도 센서 값을 알아내는 코드<br>
+**5) myCamera.py** – [카메라 촬영하는 파이썬 코드] 카메라를 통해 사용자 자리를 촬영하고 openCV를 가지고 사람의 얼굴을 표시하는 코드<br>
 
 ### 2) js 혹은 css 코드 (static)
 

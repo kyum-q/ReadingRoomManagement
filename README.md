@@ -1,7 +1,7 @@
 # ReadingRoomManagement
 라즈베리파이를 이용한 독서실 이용관리 시스템
 
-## 📚&nbsp; 작품 소개
+## 작품 소개
 
 독서실에 카메라, 초음파 센서, 온습도 센서, LED 등을 연결한 라즈베리파이를 이용해 독서실을 관리하는 시스템이다. <br>
 이 시스템은 먼저 하나의 웹사이트로 관리를 할 수 있다. 이러한 관리 시스템은 웹사이트 접속자가 사용자인지 관리자인지에 따라 용도가 다르다. 사용자인지 관리자인지는 웹사이트에서 선택할 수 있다.<br>
@@ -16,7 +16,7 @@
 관리자는 사용자의 선택에 따라 독서실 내에 자리에 사람이 있는지 있다면 사용 시간은 얼마나 남았는지 확인할 수 있다. 또한 사용자의 사용여부를 초음파 센서와 카메라를 통해 알아낼 수 있다. 그리고 이를통해 사용자가 존재하지 않음이 판단될 경우 관리자 임의로 자리를 비울 수 있다.<br>
 사용자 사용여부는 사용자 자리에 있는 초음파 센서 변화 그래프를 통해 확인하거나 독서실을 비추고 있는 카메라를 확인하여 사용자가 자리에 없음이 확인할 수 있다. <br><br>
 
-## ✍🏻&nbsp; 시스템 구조
+## 시스템 구조
 
 ### 1) 독서실 자리 - 사용자 및 관리자의 데이터 전송 구조
 ![Group 9](https://github.com/kyum-q/ReadingRoomManagement/assets/109158497/d67453c4-c163-48e7-9785-673d82b34914)
@@ -26,7 +26,7 @@
 ![image 15](https://github.com/kyum-q/ReadingRoomManagement/assets/109158497/22379be9-34b2-418a-b1df-6b9e15cc05ac)
 <br>
 
-## 💻&nbsp; 하드웨어 구조
+## 하드웨어 구조
 
 라즈베리파이에 카메라 1개, 온습도 센서 1개, 초음파 센서 1개, LED 4개, 버튼 1개를 사용한다.<br><br>
 
@@ -39,7 +39,7 @@ LED – GPIO 5, GPIO 6, GPIO 13, GPIO 19<br>
 **<p align="center">[라즈베리파이 구성]</p>**
 <br>
 
-## 💡&nbsp; 소프트웨어 구조
+## 소프트웨어 구조
 
 <img width="1439" alt="image" src="https://github.com/kyum-q/ReadingRoomManagement/assets/109158497/5ba77b43-ab0b-4b42-bffa-297241cdc22d">
 
@@ -75,7 +75,7 @@ LED – GPIO 5, GPIO 6, GPIO 13, GPIO 19<br>
 **6) managerLogin.html** – 관리자 모드 선택시 로그인 html<br>
 **7) manager.html** – 관리자 모드 html (초음파센서 차트, 카메라 촬영, 사용자 사용 종료)<br><br>
 
-## 📋&nbsp; 실행 화면
+## 실행 화면
 <br>
 
 ### 초기 화면 
@@ -220,4 +220,8 @@ LED – GPIO 5, GPIO 6, GPIO 13, GPIO 19<br>
 
 ![image-026](https://github.com/kyum-q/ReadingRoomManagement/assets/109158497/9929a579-95d7-4c87-9fc0-9e8744751431)
 **<p align="center">[모든 LED가 꺼진 상태]</p>**
-<br><br>
+
+<br>
+
+## 개발 언어
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=Html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=Css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white">
